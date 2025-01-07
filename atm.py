@@ -9,6 +9,6 @@ while True:
     select_num += input("사용하실 기능을 선택해주세요. (1: 입금, 2: 출급, 3: 영수증 보기, 4: 종료)")
 
     if select_num == "4":
-        print(f'서비스를 종료합니다. 현재 잔액은 {balance}원 입니다 ^^')
+        print(f'서비스를 종료합니다. 현재 잔액은 {balance}원 입니다 :)')
         break
 
