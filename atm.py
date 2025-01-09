@@ -2,7 +2,14 @@
 # 잘못된 입력 값(숫자가 아닌 값, 음수 값 등..)을 처리하도록 기능을 추가해주세요.
 # 유효하지 않은 메뉴 선택 시 경고 메시지 또는 사용방법 재안내를 해주세요.
 # gitmoji는 bug 로 선택!!
+"""
+input() 함수로 입력 값을 받는 부분은 보두
 
+try:
+except ValueError:
+
+다음과 같이 처리하였으며, ValueError 는 type 으로는 맞지만 유효하지 않은 값일 경우를 대비해 사용했습니다.
+"""
 receipts = []
 balance = 3000
 
@@ -37,10 +44,10 @@ while True:
                 print("유효한 숫자를 입력해주세요.")
         elif select_num == 3:  # 영수증 보기
             print("<=영수증=>")
-            if receipts:
-                for record in receipts:
+            if receipts:    # receipts 리스트에 요소가 있는지에 따라 True/False 반환
+                for record in receipts: # receipts 에 값을 하나씩 추출
                     print(f"{record[0]}: {record[1]}원 | 잔액: {record[2]}원")
-            else:
+            else:   # receipts 리스트에 요소가 없어 False 일 경우 예외처리
                 print("기록된 영수증이 없습니다.")
         else:
             print("유효한 메뉴 번호를 선택해주세요. (1, 2, 3, 4)")
