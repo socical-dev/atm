@@ -36,10 +36,10 @@ while True:
             except ValueError:
                 print("유효한 숫자를 입력해주세요.")
         elif select_num == 3:  # 영수증 보기
-            print("영수증")
+            print("<=영수증=>")
             if receipts:
                 for record in receipts:
-                    print(f"{record[0]}: {record[1]}원, 잔액: {record[2]}원")
+                    print(f"{record[0]}: {record[1]}원 | 잔액: {record[2]}원")
             else:
                 print("기록된 영수증이 없습니다.")
         else:
